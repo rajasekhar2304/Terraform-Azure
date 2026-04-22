@@ -1,24 +1,8 @@
 resource "azurerm_resource_group" "RG1" {
-  name     = "RG1"
-  location = "eastus"
+  name     = var.rg1_name
+  location = var.location
 
   tags = {
-    environment = "Production"
-  }
-}
-resource "azurerm_resource_group" "RG2" {
-  name     = "RG2"
-  location = "westus"
-
-  tags = {
-    environment = "Production"
-  }
-}
-resource "azurerm_resource_group" "RG3" {
-  name     = "RG3"
-  location = "centralindia"
-
-  tags = {
-    environment = "Production"
+    environment = var.environment
   }
 }
