@@ -16,7 +16,7 @@ resource "azurerm_resource_group" "RG2" {
 }
 resource "azurerm_resource_group" "RG3" {
   name     = "RG3"
-  location = "ceindia"
+  location = "centralindia"
 
   tags = {
     environment = "Production"
