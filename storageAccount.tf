@@ -10,3 +10,9 @@ resource "azurerm_storage_account" "azb48prodtfstate" {
     environment = "Production"
   }
 }
+
+resource "azurerm_storage_container" "azb48prodtfstate" {
+  name                  = "tfstate"
+  storage_account_id  = azurerm_storage_account.azb48prodtfstate.id
+  container_access_type = "private"
+}
